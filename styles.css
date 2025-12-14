@@ -137,3 +137,46 @@ input, textarea {
   border-top: 1px solid var(--border);
   color: var(--muted);
 }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--border);
+  background: rgba(15, 17, 21, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.topbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.brand {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.topbar__links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topbar__links a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.topbar__links a:hover {
+  color: var(--text);
+  background: rgba(255,255,255,0.06);
+}
+
+@media (max-width: 520px) {
+  .topbar__links a:not(.btn) { display: none; }
+}

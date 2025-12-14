@@ -1,103 +1,127 @@
-<header class="hero">
-  <div class="container">
-    <p class="kicker">Servicio premium</p>
-    <h1>Landing v1</h1>
-    <p class="lead">Una propuesta clara, rápida y enfocada a conversión.</p>
-    <div class="actions">
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Landing v1</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <nav class="topbar">
+  <div class="container topbar__inner">
+    <a class="brand" href="#">Landing v1</a>
+    <div class="topbar__links">
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contacto</a>
       <a class="btn primary" href="#contacto">Pedir info</a>
-      <a class="btn" href="#servicios">Ver servicios</a>
     </div>
   </div>
-</header>
+</nav>
 
-<main>
-  <section class="section">
+  <header class="hero">
     <div class="container">
-      <h2>Beneficios</h2>
-      <div class="grid grid-3">
-        <article class="card">
-          <h3>Rápido</h3>
-          <p>Optimizado para cargar veloz y verse bien.</p>
-        </article>
-        <article class="card">
-          <h3>Claro</h3>
-          <p>Mensaje directo con CTA y estructura limpia.</p>
-        </article>
-        <article class="card">
-          <h3>Medible</h3>
-          <p>Listo para analítica y mejoras por iteración.</p>
-        </article>
+      <p class="kicker">Servicio premium</p>
+      <h1>Landing v1</h1>
+      <p class="lead">Una propuesta clara, rápida y enfocada a conversión.</p>
+      <div class="actions">
+        <a class="btn primary" href="#contacto">Pedir info</a>
+        <a class="btn" href="#servicios">Ver servicios</a>
       </div>
     </div>
-  </section>
+  </header>
 
-  <section class="section" id="servicios">
-    <div class="container">
-      <h2>Servicios</h2>
-      <div class="grid grid-2">
-        <article class="card">
-          <h3>Servicio 1</h3>
-          <p>Descripción breve orientada al valor.</p>
-        </article>
-        <article class="card">
-          <h3>Servicio 2</h3>
-          <p>Descripción breve orientada al valor.</p>
-        </article>
-        <article class="card">
-          <h3>Servicio 3</h3>
-          <p>Descripción breve orientada al valor.</p>
-        </article>
-        <article class="card">
-          <h3>Servicio 4</h3>
-          <p>Descripción breve orientada al valor.</p>
-        </article>
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>Beneficios</h2>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>Rápido</h3>
+            <p>Optimizado para cargar veloz y verse bien.</p>
+          </article>
+          <article class="card">
+            <h3>Claro</h3>
+            <p>Mensaje directo con CTA y estructura limpia.</p>
+          </article>
+          <article class="card">
+            <h3>Medible</h3>
+            <p>Listo para analítica y mejoras por iteración.</p>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="container">
-      <h2>Reseñas</h2>
-      <div class="grid grid-2">
-        <figure class="card">
-          <blockquote>“Muy buen servicio. Rápido y profesional.”</blockquote>
-          <figcaption>— Cliente 1</figcaption>
-        </figure>
-        <figure class="card">
-          <blockquote>“Me atendieron perfecto y el resultado fue top.”</blockquote>
-          <figcaption>— Cliente 2</figcaption>
-        </figure>
+    <section class="section" id="servicios">
+      <div class="container">
+        <h2>Servicios</h2>
+        <div class="grid grid-2">
+          <article class="card">
+            <h3>Servicio 1</h3>
+            <p>Descripción breve orientada al valor.</p>
+          </article>
+          <article class="card">
+            <h3>Servicio 2</h3>
+            <p>Descripción breve orientada al valor.</p>
+          </article>
+          <article class="card">
+            <h3>Servicio 3</h3>
+            <p>Descripción breve orientada al valor.</p>
+          </article>
+          <article class="card">
+            <h3>Servicio 4</h3>
+            <p>Descripción breve orientada al valor.</p>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" id="contacto">
+    <section class="section">
+      <div class="container">
+        <h2>Reseñas</h2>
+        <div class="grid grid-2">
+          <figure class="card">
+            <blockquote>“Muy buen servicio. Rápido y profesional.”</blockquote>
+            <figcaption>— Cliente 1</figcaption>
+          </figure>
+          <figure class="card">
+            <blockquote>“Me atendieron perfecto y el resultado fue top.”</blockquote>
+            <figcaption>— Cliente 2</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacto">
+      <div class="container">
+        <h2>Contacto</h2>
+        <form class="form">
+          <label>
+            Nombre
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+
+          <label>
+            Mensaje
+            <textarea name="message" rows="4" autocomplete="off" required></textarea>
+          </label>
+
+          <button class="btn primary" type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
     <div class="container">
-      <h2>Contacto</h2>
-      <form class="form">
-        <label>
-          Nombre
-          <input type="text" name="name" required />
-        </label>
-
-        <label>
-          Email
-          <input type="email" name="email" required />
-        </label>
-
-        <label>
-          Mensaje
-          <textarea name="message" rows="4" required></textarea>
-        </label>
-
-        <button class="btn primary" type="submit">Enviar</button>
-      </form>
+      <small>© Landing v1</small>
     </div>
-  </section>
-</main>
+  </footer>
+</body>
+</html>
 
-<footer class="footer">
-  <div class="container">
-    <small>© Landing v1</small>
-  </div>
-</footer>

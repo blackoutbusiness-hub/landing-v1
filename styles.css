@@ -180,3 +180,9 @@ input, textarea {
 @media (max-width: 520px) {
   .topbar__links a:not(.btn) { display: none; }
 }
+.hero { padding-top: 18px; }
+@media (max-width: 520px) {
+  .topbar__inner { justify-content: space-between; }
+  .brand { font-size: 14px; }
+  .btn { padding: 10px 16px; }
+}

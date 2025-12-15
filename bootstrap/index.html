@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Landing v1 (Bootstrap)</title>
+
+    <!-- Bootstrap 5 (CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Tu CSS -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+<!-- Sticky CTA móvil (solo móvil) -->
+<div class="d-md-none fixed-bottom bg-black border-top border-secondary">
+  <div class="container py-2">
+    <div class="d-flex gap-2">
+      <a class="btn btn-primary flex-fill" href="#contacto">Pedir info</a>
+
+      <!-- WhatsApp: sustituye el número y el texto -->
+      <a
+        class="btn btn-outline-light flex-fill"
+        href="https://wa.me/34654246333?text=Hola%20quiero%20info%20de%20Landing%20v1"
+        target="_blank"
+        rel="noopener"
+      >WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+  <body>
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top border-bottom border-secondary">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="#">Landing v1</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#beneficios">Beneficios</a></li>
+            <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="#resenas">Reseñas</a></li>
+          </ul>
+
+          <a class="btn btn-light ms-lg-3 mt-2 mt-lg-0" href="#contacto">Pedir info</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="py-5">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <div class="text-uppercase text-secondary small fw-semibold mb-2">Servicio premium</div>
+            <h1 class="display-5 fw-bold text-white">Una landing clara, rápida y enfocada a conversión.</h1>
+            <p class="lead text-secondary mb-4">
+              Estructura simple + CTA directo + secciones listas para iterar.
+            </p>
+
+            <div class="d-flex gap-2 flex-wrap">
+              <a class="btn btn-primary btn-lg" href="#contacto">Pedir info</a>
+              <a class="btn btn-outline-light btn-lg" href="#servicios">Ver servicios</a>
+            </div>
+
+            <div class="mt-4 d-flex gap-2 flex-wrap">
+              <span class="badge rounded-pill text-bg-dark border border-secondary">✅ Mobile-first</span>
+              <span class="badge rounded-pill text-bg-dark border border-secondary">✅ Rápida</span>
+              <span class="badge rounded-pill text-bg-dark border border-secondary">✅ Medible</span>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="p-4 rounded-4 border border-secondary bg-card shadow-sm">
+              <h2 class="h5 text-white mb-3">Lo que incluye</h2>
+              <ul class="list-unstyled text-secondary mb-0">
+                <li class="mb-2">• Secciones base (beneficios, servicios, reseñas, contacto)</li>
+                <li class="mb-2">• CTA fijo en navbar</li>
+                <li class="mb-2">• Cards + grid responsive (Bootstrap)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- BENEFICIOS -->
+      <section id="beneficios" class="py-5">
+        <div class="container">
+          <h2 class="h3 text-white mb-4">Beneficios</h2>
+
+          <div class="row g-3">
+            <div class="col-md-4">
+              <div class="card h-100 bg-card border-secondary">
+                <div class="card-body">
+                  <h3 class="h5 text-white">Rápido</h3>
+                  <p class="text-secondary mb-0">Optimizado para cargar veloz y verse bien.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card h-100 bg-card border-secondary">
+                <div class="card-body">
+                  <h3 class="h5 text-white">Claro</h3>
+                  <p class="text-secondary mb-0">Mensaje directo con CTA y estructura limpia.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card h-100 bg-card border-secondary">
+                <div class="card-body">
+                  <h3 class="h5 text-white">Medible</h3>
+                  <p class="text-secondary mb-0">Listo para analítica y mejoras por iteración.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICIOS -->
+      <section id="servicios" class="py-5">
+        <div class="container">
+          <h2 class="h3 text-white mb-4">Servicios</h2>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="card bg-card border-secondary">
+                <div class="card-body">
+                  <h3 class="h5 text-white">Servicio 1</h3>
+                  <p class="text-secondary mb-0">Descripción breve orientada al valor.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card bg-card border-secondary">
+                <div class="card-body">
+                  <h3 class="h5 text-white">Servicio 2</h3>
+                  <p class="text-secondary mb-0">Descripción breve orientada al valor.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card bg-card border-secondary">
+                <div class="card-body">
+                  <h3 class="h5 text-white">Servicio 3</h3>
+                  <p class="text-secondary mb-0">Descripción breve orientada al valor.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card bg-card border-secondary">
+                <div class="card-body">
+                  <h3 class="h5 text-white">Servicio 4</h3>
+                  <p class="text-secondary mb-0">Descripción breve orientada al valor.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESEÑAS -->
+      <section id="resenas" class="py-5">
+        <div class="container">
+          <h2 class="h3 text-white mb-4">Reseñas</h2>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="card bg-card border-secondary">
+                <div class="card-body">
+                  <p class="text-white-50 mb-2">“Muy buen servicio. Rápido y profesional.”</p>
+                  <div class="text-secondary">— Cliente 1</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card bg-card border-secondary">
+                <div class="card-body">
+                  <p class="text-white-50 mb-2">“Me atendieron perfecto y el resultado fue top.”</p>
+                  <div class="text-secondary">— Cliente 2</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section id="contacto" class="py-5">
+        <div class="container">
+          <h2 class="h3 text-white mb-4">Contacto</h2>
+
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <form class="p-4 rounded-4 border border-secondary bg-card" action="#" method="post">
+                <div class="mb-3">
+                  <label class="form-label text-secondary" for="nombre">Nombre</label>
+                  <input class="form-control" id="nombre" name="nombre" autocomplete="name" required />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label text-secondary" for="email">Email</label>
+                  <input class="form-control" type="email" id="email" name="email" autocomplete="email" required />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label text-secondary" for="mensaje">Mensaje</label>
+                  <textarea class="form-control" id="mensaje" name="mensaje" rows="4" autocomplete="off" required></textarea>
+                </div>
+
+                <button class="btn btn-primary w-100" type="submit">Enviar</button>
+                <p class="text-secondary small mt-2 mb-0">Demo (sin backend).</p>
+              </form>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="p-4 rounded-4 border border-secondary bg-card h-100">
+                <h3 class="h5 text-white">Siguiente mejora</h3>
+                <p class="text-secondary mb-3">
+                  Luego convertimos “Pedir info” en botón WhatsApp con mensaje prellenado.
+                </p>
+                <a class="btn btn-outline-light" href="#contacto">OK, después</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-4 border-top border-secondary">
+      <div class="container text-secondary small">© Landing v1</div>
+    </footer>
+<div class="d-md-none" style="height:72px"></div>
+
+    <!-- Bootstrap JS (para el menú móvil) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

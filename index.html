@@ -3,39 +3,104 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Landing v1</title>
+
+  <title>Landing v1 | Servicio premium</title>
+  <meta name="description" content="Una propuesta clara, rápida y enfocada a conversión. Pide info por WhatsApp en 1 minuto." />
+
+  <meta property="og:title" content="Landing v1 | Servicio premium" />
+  <meta property="og:description" content="Una propuesta clara, rápida y enfocada a conversión. Pide info por WhatsApp en 1 minuto." />
+  <meta property="og:type" content="website" />
+
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
-  <nav class="topbar">
-  <div class="container topbar__inner">
-    <a class="brand" href="#">Landing v1</a>
-    <div class="topbar__links">
-      <a href="#servicios">Servicios</a>
-      <a href="#contacto">Contacto</a>
-      <a class="btn primary" href="#contacto">Pedir info</a>
-    </div>
-  </div>
-</nav>
+  <!-- Ajusta aquí -->
+  <script>
+    const BUSINESS_NAME = "Blackout Business";
+    const WHATSAPP_NUMBER = "34654246333"; // Ej: "34600111222" (España: 34 + número)
+    const WHATSAPP_DEFAULT_TEXT = `Hola ${BUSINESS_NAME}, quiero información y presupuesto.`;
+    function waLink(text) {
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+    }
+  </script>
 
-  <header class="hero">
-    <div class="container">
-      <p class="kicker">Servicio premium</p>
-      <h1>Landing v1</h1>
-      <p class="lead">Una propuesta clara, rápida y enfocada a conversión.</p>
-      <div class="actions">
-        <a class="btn primary" href="#contacto">Pedir info</a>
-        <a class="btn" href="#servicios">Ver servicios</a>
-      </div>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top" aria-label="Inicio">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span id="brandName">Tu Marca</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación">
+        <a href="#beneficios">Beneficios</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <a class="btn btn--primary btn--sm" id="topbarCta" target="_blank" rel="noopener">
+        Pedir info
+      </a>
     </div>
   </header>
 
-  <main>
-    <section class="section">
+  <main id="top">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="kicker">SERVICIO PREMIUM</p>
+          <h1>Landing v1</h1>
+          <p class="subhead">
+            Mensaje directo, estructura limpia y lista para iterar. Te respondemos por WhatsApp en minutos.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn btn--primary" id="heroCtaPrimary" target="_blank" rel="noopener">Pedir info</a>
+            <a class="btn btn--ghost" href="#servicios">Ver servicios</a>
+          </div>
+
+          <ul class="trust">
+            <li>✅ Respuesta rápida</li>
+            <li>✅ Propuesta clara</li>
+            <li>✅ Enfoque a conversión</li>
+          </ul>
+        </div>
+
+        <div class="hero__card">
+          <h2>Lo que consigues</h2>
+          <ul class="checklist">
+            <li>Copy orientado a valor + CTA</li>
+            <li>Secciones clave (beneficios, servicios, reseñas, FAQ)</li>
+            <li>Diseño responsive real</li>
+            <li>Captura por WhatsApp sin backend</li>
+          </ul>
+
+          <div class="mini-metrics">
+            <div class="metric">
+              <div class="metric__num">1</div>
+              <div class="metric__txt">CTA principal</div>
+            </div>
+            <div class="metric">
+              <div class="metric__num">2</div>
+              <div class="metric__txt">Acciones secundarias</div>
+            </div>
+            <div class="metric">
+              <div class="metric__num">5</div>
+              <div class="metric__txt">Secciones</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="beneficios">
       <div class="container">
         <h2>Beneficios</h2>
-        <div class="grid grid-3">
+        <p class="muted">Tres razones claras para actuar ya.</p>
+
+        <div class="grid grid--3">
           <article class="card">
             <h3>Rápido</h3>
             <p>Optimizado para cargar veloz y verse bien.</p>
@@ -54,8 +119,12 @@
 
     <section class="section" id="servicios">
       <div class="container">
-        <h2>Servicios</h2>
-        <div class="grid grid-2">
+        <div class="section__head">
+          <h2>Servicios</h2>
+          <a class="btn btn--ghost btn--sm" id="servicesCta" target="_blank" rel="noopener">Pedir presupuesto</a>
+        </div>
+
+        <div class="grid grid--2">
           <article class="card">
             <h3>Servicio 1</h3>
             <p>Descripción breve orientada al valor.</p>
@@ -76,15 +145,37 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="proceso">
+      <div class="container">
+        <h2>Proceso</h2>
+        <p class="muted">Simple, rápido y sin fricción.</p>
+
+        <div class="grid grid--3">
+          <article class="card">
+            <h3>1) Nos escribes</h3>
+            <p>Nos dices qué necesitas (WhatsApp o formulario).</p>
+          </article>
+          <article class="card">
+            <h3>2) Te asesoramos</h3>
+            <p>Te guiamos con una propuesta clara y opciones.</p>
+          </article>
+          <article class="card">
+            <h3>3) Ejecutamos</h3>
+            <p>Entregamos con calidad y soporte para iterar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Reseñas">
       <div class="container">
         <h2>Reseñas</h2>
-        <div class="grid grid-2">
-          <figure class="card">
+        <div class="grid grid--2">
+          <figure class="card quote">
             <blockquote>“Muy buen servicio. Rápido y profesional.”</blockquote>
             <figcaption>— Cliente 1</figcaption>
           </figure>
-          <figure class="card">
+          <figure class="card quote">
             <blockquote>“Me atendieron perfecto y el resultado fue top.”</blockquote>
             <figcaption>— Cliente 2</figcaption>
           </figure>
@@ -92,36 +183,107 @@
       </div>
     </section>
 
+    <section class="section" id="faq">
+      <div class="container">
+        <h2>FAQ</h2>
+        <div class="faq">
+          <details class="card">
+            <summary>¿Cuánto tardan en responder?</summary>
+            <p>Normalmente en el mismo día. Si es horario laboral, suele ser rápido.</p>
+          </details>
+
+          <details class="card">
+            <summary>¿Puedo pedir presupuesto sin compromiso?</summary>
+            <p>Sí. Te damos una propuesta clara según lo que necesites.</p>
+          </details>
+
+          <details class="card">
+            <summary>¿Cómo se coordina el servicio?</summary>
+            <p>Por WhatsApp: definimos alcance, tiempos y confirmamos la entrega.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="contacto">
       <div class="container">
         <h2>Contacto</h2>
-        <form class="form">
-          <label>
-            Nombre
-            <input type="text" name="name" autocomplete="name" required />
-          </label>
+        <p class="muted">Rellena esto y se enviará como mensaje de WhatsApp.</p>
 
-          <label>
-            Email
-            <input type="email" name="email" autocomplete="email" required />
-          </label>
+        <form class="form card" id="leadForm">
+          <div class="form__row">
+            <label>
+              Nombre
+              <input type="text" name="nombre" autocomplete="name" placeholder="Tu nombre" required />
+            </label>
+
+            <label>
+              Email
+              <input type="email" name="email" autocomplete="email" placeholder="tu@email.com" required />
+            </label>
+          </div>
 
           <label>
             Mensaje
-            <textarea name="message" rows="4" autocomplete="off" required></textarea>
+            <textarea name="mensaje" rows="4" autocomplete="off" placeholder="Cuéntanos qué necesitas…" required></textarea>
           </label>
 
-          <button class="btn primary" type="submit">Enviar</button>
+          <div class="form__actions">
+            <button class="btn btn--primary" type="submit">Enviar por WhatsApp</button>
+            <a class="btn btn--ghost" id="contactCta" target="_blank" rel="noopener">Abrir WhatsApp</a>
+          </div>
         </form>
       </div>
     </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <small>© <span id="year"></span> <span id="brandName2">Tu Marca</span>. Todos los derechos reservados.</small>
+        <div class="footer__links">
+          <a href="#top">Inicio</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </div>
+    </footer>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <small>© Landing v1</small>
-    </div>
-  </footer>
+  <!-- Sticky CTA móvil -->
+  <div class="sticky-cta" aria-label="Acciones rápidas">
+    <a class="btn btn--primary" id="stickyCtaPrimary" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="btn btn--ghost" href="#contacto">Contacto</a>
+  </div>
+
+  <script>
+    // Pintar marca/año y enlaces WhatsApp
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("brandName").textContent = BUSINESS_NAME;
+    document.getElementById("brandName2").textContent = BUSINESS_NAME;
+
+    const defaultLink = waLink(WHATSAPP_DEFAULT_TEXT);
+    document.getElementById("topbarCta").href = defaultLink;
+    document.getElementById("heroCtaPrimary").href = defaultLink;
+    document.getElementById("servicesCta").href = defaultLink;
+    document.getElementById("contactCta").href = defaultLink;
+    document.getElementById("stickyCtaPrimary").href = defaultLink;
+
+    // Form -> WhatsApp (sin backend)
+    const form = document.getElementById("leadForm");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const nombre = (data.get("nombre") || "").toString().trim();
+      const email = (data.get("email") || "").toString().trim();
+      const mensaje = (data.get("mensaje") || "").toString().trim();
+
+      const text =
+        `Hola ${BUSINESS_NAME}, soy ${nombre}.\n` +
+        `Email: ${email}\n` +
+        `Mensaje: ${mensaje}\n\n` +
+        `Enviado desde la landing.`;
+
+      window.open(waLink(text), "_blank", "noopener");
+    });
+  </script>
 </body>
 </html>
-
